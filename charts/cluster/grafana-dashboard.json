@@ -2409,7 +2409,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "clamp_max(max(rate(controller_runtime_reconcile_total{namespace=~\"$operatorNamespace\", result=\"error\", controller=~\"scheduledbackup|scheduled-backup\"}[5])), 1)",
+          "expr": "clamp_max(max(rate(controller_runtime_reconcile_total{namespace=~\"$operatorNamespace\", result=\"error\", controller=~\"scheduledbackup|scheduled-backup\"}[5m])), 1)",
           "hide": true,
           "legendFormat": "__auto",
           "range": true,
