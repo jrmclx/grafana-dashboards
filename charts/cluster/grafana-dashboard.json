@@ -1554,7 +1554,7 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "max((1 - cnpg_pg_replication_in_recovery{namespace=~\"$namespace\", pod=~\"$instances\"}) * (time() - timestamp(cnpg_pg_stat_archiver_seconds_since_last_archival{namespace=~\"$namespace\", pod=~\"$instances\"}) +\ncnpg_pg_stat_archiver_seconds_since_last_archival{namespace=~\"$namespace\", pod=~\"$instances\"})\n* on(pod, namespace) group_left()\n(cnpg_collector_pg_wal_archive_status{namespace=~\"$namespace\", pod=~\"$instances\", value=\"ready\"} > bool 0))",
+          "expr": "max((1 - cnpg_pg_replication_in_recovery{namespace=~\"$namespace\",pod=~\"$instances\"}) * (time() - timestamp(cnpg_pg_stat_archiver_seconds_since_last_archival{namespace=~\"$namespace\",pod=~\"$instances\"}) +\ncnpg_pg_stat_archiver_seconds_since_last_archival{namespace=~\"$namespace\",pod=~\"$instances\"}))",
           "format": "time_series",
           "instant": true,
           "interval": "",
